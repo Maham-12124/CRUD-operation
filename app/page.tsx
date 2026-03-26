@@ -1,65 +1,65 @@
-import Image from "next/image";
+// import Link from "next/link";
+
+// export default function Home() {
+//   return (
+//     <main className="flex min-h-screen flex-col items-center justify-center p-24 bg-gradient-to-b from-white to-slate-100">
+//       <div className="text-center">
+//         <h1 className="text-5xl font-black text-slate-900 mb-6 tracking-tight">
+//           Welcome to My <span className="text-indigo-600">CRUD</span>
+//         </h1>
+//         <p className="text-slate-500 text-lg mb-8 max-w-md mx-auto">
+//           Week 6-8 Practice: Next.js App Router, Server Actions, and PostgreSQL.
+//         </p>
+        
+//         {/* Button to go to Dashboard */}
+//         <Link 
+//           href="/dashboard" 
+//           className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-2xl font-bold shadow-xl transition-all hover:scale-105 active:scale-95"
+//         >
+//           Go to Dashboard →
+//         </Link>
+//       </div>
+//     </main>
+//   );
+// }
+
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen bg-[#fdfaf7] flex flex-col items-center justify-center p-6 font-sans">
+      {/* Top Logo/Brand */}
+      {/* <div className="absolute top-10 flex items-center gap-2">
+        <span className="text-xl font-bold tracking-tighter text-[#3e2723]">TaskApp 🚀</span>
+      </div> */}
+
+      <div className="max-w-2xl text-center space-y-8">
+        {/* Main Heading */}
+        <div className="space-y-4">
+          <h1 className="text-6xl md:text-7xl font-serif italic text-[#3e2723] tracking-tight">
+            Welcome to My <span className="text-[#8d6e63]">CRUD</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-[#a1887f] uppercase tracking-[0.3em] text-xs font-bold">
+            Week 6-8 Practice: Next.js App Router & PostgreSQL
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+
+        {/* Action Button */}
+        <div className="pt-6">
+          <Link 
+            href="/dashboard" 
+            className="group relative inline-flex items-center gap-3 bg-[#3e2723] text-[#fdfaf7] px-10 py-4 rounded-full text-lg font-medium hover:bg-[#5d4037] transition-all duration-300 shadow-xl shadow-brown-200/20"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            Go to Dashboard
+            <span className="group-hover:translate-x-1 transition-transform">→</span>
+          </Link>
         </div>
-      </main>
-    </div>
+      </div>
+
+      {/* Decorative Elements */}
+      <div className="absolute bottom-10 text-[10px] text-[#d7ccc8] uppercase tracking-widest font-semibold">
+        Designed with Elegance • 2026
+      </div>
+    </main>
   );
 }
